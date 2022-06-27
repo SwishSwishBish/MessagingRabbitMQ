@@ -1,6 +1,7 @@
 package com.sena.messagingrabbitmq;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
@@ -48,6 +49,19 @@ public class MessagingRabbitMqApplication {
         return new Jackson2JsonMessageConverter(objectMapper);
     }
 
+    @Bean
+    public SimpleRabbitListenerContainerFactory listenerContainerFactory()
+    {
+        SimpleRabbitListenerContainerFactory containerFactory = new SimpleRabbitListenerContainerFactory();
+        containerFactory.setConnectionFactory(connectionFactory());
+        containerFactory.setMessageConverter(messageConverter());
+        containerFactory.setMaxConcurrentConsumers(10);
+        containerFactory.setConcurrentConsumers(5);
+        containerFactory.setAutoStartup(true);
+        containerFactory.setPrefetchCount(10);
+
+        return containerFactory;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(MessagingRabbitMqApplication.class, args);
