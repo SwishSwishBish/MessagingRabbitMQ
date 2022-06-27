@@ -28,11 +28,22 @@ public class DirectExchangeConfig {
     @Value("${rabbitmq.direct.routing-key-2}")
     private String DIRECT_ROUTING_KEY_2;
 
-    @Value("${rabbitmq.direct.deead-letter-queue-1}")
+    @Value("${rabbitmq.direct.dead-letter-queue-1}")
     private String DIRECT_DEAD_LETTER_QUEUE_1;
 
     @Autowired
     private AmqpAdmin amqpAdmin;
+
+    @PostConstruct
+    public void init()
+    {
+        amqpAdmin.declareQueue(createDirectQueue1());
+        amqpAdmin.declareQueue(createDirectQueue2());
+        amqpAdmin.declareQueue(createDeadLetterQueue1());
+        amqpAdmin.declareExchange(createDirectExchange());
+        amqpAdmin.declareBinding(createDirectBinding1());
+        amqpAdmin.declareBinding(createDirectBinding2());
+    }
 
     Queue createDirectQueue1()
     {
@@ -75,16 +86,5 @@ public class DirectExchangeConfig {
         rabbitTemplate.setExchange(DIRECT_EXCHANGE);
 
         return rabbitTemplate;
-    }
-
-    @PostConstruct
-    public void init()
-    {
-        amqpAdmin.declareQueue(createDirectQueue1());
-        amqpAdmin.declareQueue(createDirectQueue2());
-        amqpAdmin.declareQueue(createDeadLetterQueue1());
-        amqpAdmin.declareExchange(createDirectExchange());
-        amqpAdmin.declareBinding(createDirectBinding1());
-        amqpAdmin.declareBinding(createDirectBinding2());
     }
 }
