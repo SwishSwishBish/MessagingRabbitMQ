@@ -78,7 +78,7 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
 			<th align="center">Default Exchange</th>
 			<td >&nbsp;<p align="center"><img 
                         style="width: 85%;"
-                        src="images/default-exchange.png" 
+                        src="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/images/default-exchange.png" 
                         alt="diagram"></img>
                     </p></td>
 			<td>
@@ -100,7 +100,7 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
 			<th align="center">Direct Exchange</th>
 			<td >&nbsp;<p align="center"><img 
                         style="width: 90%;"
-                        src="images/direct-exchange.png" 
+                        src="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/images/direct-exchange.png" 
                         alt="diagram"></img>
                     </p></td>
 			<td>
@@ -122,7 +122,7 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
 			<th align="center">Fanout Exchange</th>
 			<td >&nbsp;<p align="center"><img 
                         style="width: 90%;"
-                        src="images/fanout-exchange.png" 
+                        src="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/images/fanout-exchange.png" 
                         alt="diagram"></img>
                     </p></td>
 			<td>
