@@ -144,7 +144,7 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
 			<th align="center">Topic Exchange</th>
 			<td >&nbsp;<p align="center"><img 
                         style="width: 90%;"
-                        src="images/topic-exchange.png" 
+                        src="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/images/topic-exchange.png" 
                         alt="diagram"></img>
                     </p></td>
 			<td>
@@ -166,7 +166,7 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
 			<th align="center">Header Exchange</th>
 			<td >&nbsp;<p align="center"><img 
                         style="width: 90%;"
-                        src="images/header-exchange.png" 
+                        src="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/images/header-exchange.png" 
                         alt="diagram"></img>
                     </p></td>
 			<td>
