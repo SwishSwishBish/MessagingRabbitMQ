@@ -33,7 +33,7 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
         <li>AMQP</li>
     </ul>
     <ul>
-        <li>RabbirMQ</li>
+        <li>RabbitMQ</li>
     </ul>
     <ul>
         <li>Lombok</li>
@@ -270,8 +270,8 @@ This project contains examples for using Spring-Boot with RabbitMQ. Developed to
 <table align="center">
     <tbody>
         <tr>
-            <th align="left">Manual Consumer</th>
-            <td align="left">
+            <th align="center">Manual Consumer</th>
+            <td align="center">
                 <a href="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/src/main/java/com/sena/messagingrabbitmq/consumer/ManualConsumer.java">Manual Consumer</a>
                 <br>
                 <a href="https://github.com/SwishSwishBish/MessagingRabbitMQ/blob/master/src/main/java/com/sena/messagingrabbitmq/controller/ManualConsumerController.java">Manual Consumer Controller</a>
